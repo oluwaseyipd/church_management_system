@@ -9,6 +9,9 @@ const outfit = Outfit({
 export const metadata = {
   title: "HGBC Influencers - Church Management System",
   description: "Sermon and Church Management Dashboard",
+  icons: {
+    icon: "https://res.cloudinary.com/yttbshx3/image/upload/v1782975092/icon_logo_kajuv5.png",
+  },
 };
 
 export default function RootLayout({ children }) {

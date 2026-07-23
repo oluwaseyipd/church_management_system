@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { 
   Lock, 
@@ -52,9 +53,13 @@ export default function LoginPage() {
 
       <div className="sm:mx-auto sm:w-full sm:max-w-md relative z-10">
         <div className="flex flex-col items-center">
-          <div className="w-12 h-12 bg-brand-orange-600 rounded-2xl flex items-center justify-center font-extrabold text-xl text-white shadow-xl shadow-brand-orange-600/30">
-            HG
-          </div>
+          <Image
+            src="https://res.cloudinary.com/yttbshx3/image/upload/v1782975092/icon_logo_kajuv5.png"
+            alt="HGBC Logo"
+            width={48}
+            height={48}
+            className="object-contain"
+          />
           <h2 className="mt-6 text-center text-3xl font-extrabold text-white tracking-tight">
             Sign In to Panel
           </h2>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { 
   LayoutDashboard, 
@@ -72,9 +73,13 @@ export default function DashboardLayout({ children }) {
       }`}>
         <div className="flex items-center justify-between h-20 px-6 border-b border-slate-900 flex-shrink-0">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-brand-orange-600 rounded-lg flex items-center justify-center font-bold text-lg text-white">
-              HG
-            </div>
+            <Image 
+              src="https://res.cloudinary.com/yttbshx3/image/upload/v1782975092/icon_logo_kajuv5.png" 
+              alt="HGBC Logo" 
+              width={40}
+              height={40}
+              className="object-contain"
+            />
             <div>
               <h1 className="font-bold tracking-tight text-white leading-tight">HGBC</h1>
               <p className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Influencers</p>
@@ -130,9 +135,13 @@ export default function DashboardLayout({ children }) {
       {/* Desktop Sidebar */}
       <div className="hidden lg:flex lg:flex-col lg:w-72 bg-slate-950 text-white flex-shrink-0 border-r border-slate-900">
         <div className="flex items-center space-x-3 h-20 px-6 border-b border-slate-900">
-          <div className="w-10 h-10 bg-brand-orange-600 rounded-lg flex items-center justify-center font-bold text-lg text-white">
-            HG
-          </div>
+          <Image 
+            src="https://res.cloudinary.com/yttbshx3/image/upload/v1782975092/icon_logo_kajuv5.png" 
+            alt="HGBC Logo" 
+            width={40}
+            height={40}
+            className="object-contain"
+          />
           <div>
             <h1 className="font-bold tracking-tight text-white leading-tight">HGBC</h1>
             <p className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Influencers</p>
