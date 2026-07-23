@@ -23,6 +23,17 @@ jobs:
         run: |
           npm ci
           npm run build
+
+      - name: Verify build output
+        run: |
+          if [ ! -d "./dist/" ]; then
+            echo "Error: dist/ directory not found after build"
+            ls -la
+            exit 1
+          fi
+          echo "Build successful. Contents of dist/:"
+          ls -la ./dist/
+
       
       - name: 📂 Upload files to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
