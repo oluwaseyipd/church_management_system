@@ -17,7 +17,7 @@ jobs:
           node-version: "20"
           # Remove or fix the cache-dependency-path
           # Option 1: Remove cache entirely(simplest)
-          # Option 2: Fix the path(see below)
+          # Option 2: Fix the path (see below)
       
       - name: Install dependencies and build
         run: |
@@ -51,4 +51,4 @@ jobs:
             **/.git*/**
             **/.github*/**
             **/node_modules/**
-            **/README.md
+            **/README.md 
