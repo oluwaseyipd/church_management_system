@@ -13,7 +13,8 @@ import {
   Users,
   LogOut, 
   Settings,
-  Globe
+  Globe,
+  Tag
 } from "lucide-react";
 
 export default function DashboardLayout({ children }) {
@@ -40,6 +41,7 @@ export default function DashboardLayout({ children }) {
   const navigation = [
     { name: "Overview", href: "/dashboard", icon: LayoutDashboard },
     { name: "Manage Sermons", href: "/dashboard/sermons", icon: Music },
+    { name: "Featured Series", href: "/dashboard/featured-series", icon: Tag },
     { name: "Team Members", href: "/dashboard/team", icon: Users },
   ];
 
@@ -202,6 +204,8 @@ export default function DashboardLayout({ children }) {
                 ? "Overview" 
                 : pathname.startsWith("/dashboard/sermons/upload") 
                 ? "Upload New Sermon" 
+                : pathname.startsWith("/dashboard/featured-series")
+                ? "Featured Series"
                 : pathname.startsWith("/dashboard/team")
                 ? "Team Members"
                 : "Manage Sermons"}
